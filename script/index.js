@@ -11,6 +11,8 @@ let activeMember = 0
 const images = document.getElementById("images")
 const menu = document.getElementById("menu")
 
+const memberName = document.getElementById("member-name")
+
 function changeStatusButtons() {
   const prev = document.getElementById("button-prev")
   const isFirst = activeMember == 0
@@ -27,7 +29,9 @@ function navigationMember(direction) {
   const member = members[activeMember]
 
   images.style.transform = `translateY(-${100 * activeMember}vh)`
+  memberName.classList = member.id
 
+  changeName(members.name)
   changeStatusButtons()
 }
 function changeMenu() {
